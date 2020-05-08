@@ -1,10 +1,59 @@
+/* COLORS */
+.container-red {
+    --color: 360;   
+}
+.container-blue {
+    --color: 200;   
+}
+.container-green {
+    --color: 100;   
+}
+.base-color {
+    background-color:hsl(var(--color),100%,50%);   
+}
+
+@for $i from 1 through 4 {
+    .darken-#{$i} {
+      background-color:hsl(var(--color),100%,(50% - ($i * 5%)));  
+    }
+    .lighten-#{$i} {
+        background-color:hsl(var(--color),100%,(50% + ($i * 5%)));   
+      }
+  }
+
+  /* END COLORS */
 
 .container {
     display: flex;
-}
+    justify-content: center;
 
-.container-red {
-    .base-color {
-        background-color: red;
+    .box{
+        margin: 0.2rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 2rem 1rem;
+        text-align: center;
     }
 }
+
+
+
+/******** EXTRA CODE *********/
+
+/* Resposive Palette */
+@media (max-width: 49.2rem) {
+    .exercise-1{
+        display: flex;
+        justify-content: center;
+
+        .container{
+            flex-direction: column;
+            width: 7rem;
+            display: inline-flex;
+        }
+    }
+}
+
+
+
+
