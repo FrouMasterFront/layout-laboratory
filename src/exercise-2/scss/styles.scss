@@ -1,0 +1,39 @@
+@use "sass:map";
+@import "red-theme";
+@import "mixins";
+
+
+@include bg-color-generator($theme-colors);
+
+
+.font-principal {
+    
+}
+.font-secondary {}
+
+
+/* Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 7rem;
+    margin: auto;
+
+    span {
+        margin: 0.5rem 0;    
+    }
+    .box{
+        margin: 0.1rem 0;
+        padding: 2rem 1rem;
+        border: 1px solid #ccc;
+        
+        &.box-shadow{
+            box-shadow: map.get($theme-box, "shadow");;
+        }
+    }
+
+}
+
+
+
+

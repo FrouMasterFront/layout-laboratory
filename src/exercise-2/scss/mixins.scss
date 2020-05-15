@@ -1,0 +1,7 @@
+@mixin bg-color-generator($map-colors) {
+    @each $name, $color in $map-colors {
+        .bg-#{$name} {
+            background-color: $color;
+        }
+    }
+}
