@@ -4,4 +4,11 @@ $theme-colors: (
   "warning": #FCD1D6,
 );
 
-$theme-box: ("shadow": -4px 4px 4px #AAA);
+$theme-box: ("shadow": -0.2rem 0.2rem 0.2rem #AAA);
+
+$border-radius: 0;
+
+$theme-fonts: (
+  "primary": Arial,
+  "secondary": Courier,
+);

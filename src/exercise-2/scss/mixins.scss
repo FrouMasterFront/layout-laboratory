@@ -5,3 +5,11 @@
         }
     }
 }
+
+@mixin font-family-generator($map-family-fonts) {
+    @each $name, $family in $map-family-fonts {
+        .font-#{$name} {
+            font-family: $family;
+        }
+    }
+}

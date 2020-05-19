@@ -1,15 +1,23 @@
 @use "sass:map";
-@import "red-theme";
-@import "mixins";
 
+/* ### Import red theme ### */
+// @import "red-theme";
+
+/* ### Import blue theme ### */
+@import "blue-theme";
+
+
+@import "mixins";
+@import "https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap";
 
 @include bg-color-generator($theme-colors);
+@include font-family-generator($theme-fonts);
 
 
-.font-principal {
-    
+:root {
+    font-family: 'Balsamiq Sans';
 }
-.font-secondary {}
+
 
 
 /* Layout */
@@ -26,7 +34,7 @@
         margin: 0.1rem 0;
         padding: 2rem 1rem;
         border: 1px solid #ccc;
-        
+        border-radius: $border-radius;
         &.box-shadow{
             box-shadow: map.get($theme-box, "shadow");;
         }
